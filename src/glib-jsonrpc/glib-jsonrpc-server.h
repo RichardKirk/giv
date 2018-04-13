@@ -28,11 +28,16 @@
 extern "C" {
 #endif
 
+// empty struct has size 0 in C, size 1 in C++
+// dummy char stops duplicate addresses
+
 typedef struct {
+  char dummy;
 } GLibJsonRpcServer; 
 
 // Queries use for async commands
 typedef struct {
+  char dummy;
 } GLibJsonRpcAsyncQuery;
 
 GLibJsonRpcServer *glib_jsonrpc_async_query_get_server(GLibJsonRpcAsyncQuery *query);

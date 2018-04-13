@@ -35,7 +35,10 @@ typedef enum {
  * Opaque handle for the lasso
  * 
  */
+// empty struct has size 0 in C, size 1 in C++
+// dummy char stops duplicate addresses
 typedef struct {
+  char dummy;
 } DovtkLasso;
 
 /** 

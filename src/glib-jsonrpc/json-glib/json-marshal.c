@@ -2,6 +2,7 @@
 
 #include	<glib-object.h>
 
+// register variables removed 13/04/18
 
 #ifdef G_ENABLE_DEBUG
 #define g_marshal_value_peek_boolean(v)  g_value_get_boolean (v)
@@ -67,9 +68,9 @@ _json_marshal_VOID__BOXED_STRING (GClosure     *closure,
                                                    gpointer     arg_1,
                                                    gpointer     arg_2,
                                                    gpointer     data2);
-  register GMarshalFunc_VOID__BOXED_STRING callback;
-  register GCClosure *cc = (GCClosure*) closure;
-  register gpointer data1, data2;
+  GMarshalFunc_VOID__BOXED_STRING callback;
+  GCClosure *cc = (GCClosure*) closure;
+  gpointer data1, data2;
 
   g_return_if_fail (n_param_values == 3);
 
@@ -104,9 +105,9 @@ _json_marshal_VOID__BOXED_INT (GClosure     *closure,
                                                 gpointer     arg_1,
                                                 gint         arg_2,
                                                 gpointer     data2);
-  register GMarshalFunc_VOID__BOXED_INT callback;
-  register GCClosure *cc = (GCClosure*) closure;
-  register gpointer data1, data2;
+  GMarshalFunc_VOID__BOXED_INT callback;
+  GCClosure *cc = (GCClosure*) closure;
+  gpointer data1, data2;
 
   g_return_if_fail (n_param_values == 3);
 

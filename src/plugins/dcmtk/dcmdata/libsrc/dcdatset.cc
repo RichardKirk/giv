@@ -30,6 +30,7 @@
  *
  */
 
+// register variables removed 13/04/18
 
 #include "dcmtk/config/osconfig.h"    /* make sure OS specific configuration is included first */
 
@@ -112,7 +113,7 @@ Uint32 DcmDataset::calcElementLength(const E_TransferSyntax xfer,
 OFBool DcmDataset::canWriteXfer(const E_TransferSyntax newXfer,
                                 const E_TransferSyntax oldXfer)
 {
-    register E_TransferSyntax originalXfer = Xfer;
+    E_TransferSyntax originalXfer = Xfer;
     if (newXfer == EXS_Unknown)
         return OFFalse;
     if (Xfer == EXS_Unknown)

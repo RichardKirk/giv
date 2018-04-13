@@ -2017,7 +2017,7 @@ view_changed(GtkImageViewer *self,
 	{
           expose_rect.x = (dx < 0) ? 0 : gtk_widget_get_allocated_width(GTK_WIDGET(self)) - dx;
           expose_rect.y = 0;
-          expose_rect.width = abs(dx);
+          expose_rect.width = fabs(dx);
           expose_rect.height = gtk_widget_get_allocated_height(GTK_WIDGET(self));
 
           gdk_window_invalidate_rect(gtk_widget_get_window(widget),
@@ -2029,7 +2029,7 @@ view_changed(GtkImageViewer *self,
           expose_rect.x = 0;
           expose_rect.y = (dy < 0) ? 0 : gtk_widget_get_allocated_height(GTK_WIDGET(self)) - dy;
           expose_rect.width = gtk_widget_get_allocated_width(GTK_WIDGET(self));
-          expose_rect.height = abs(dy);
+          expose_rect.height = fabs(dy);
 
           gdk_window_invalidate_rect(gtk_widget_get_window(widget),
                                      &expose_rect,

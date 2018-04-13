@@ -2329,7 +2329,7 @@ app_error (GivWin *self,
                                      GTK_DIALOG_DESTROY_WITH_PARENT,
                                      GTK_MESSAGE_ERROR,
                                      GTK_BUTTONS_CLOSE,
-                                     message);
+                                     "%s", message);
     gtk_window_set_keep_above(GTK_WINDOW(dialog), true);
     gtk_dialog_run (GTK_DIALOG (dialog));
     gtk_widget_destroy (dialog);

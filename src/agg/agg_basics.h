@@ -13,6 +13,8 @@
 //          http://www.antigrain.com
 //----------------------------------------------------------------------------
 
+// register variables removed 13/04/18
+
 #ifndef AGG_BASICS_INCLUDED
 #define AGG_BASICS_INCLUDED
 
@@ -203,7 +205,7 @@ namespace agg
     {
         AGG_INLINE static unsigned mul(unsigned a, unsigned b)
         {
-            register unsigned q = a * b + (1 << (Shift-1));
+            unsigned q = a * b + (1 << (Shift-1));
             return (q + (q >> Shift)) >> Shift;
         }
     };

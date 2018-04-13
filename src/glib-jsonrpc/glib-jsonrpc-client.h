@@ -28,7 +28,10 @@
 extern "C" {
 #endif
 
+// empty struct has size 0 in C, size 1 in C++
+// dummy char stops duplicate addresses
 typedef struct {
+  char dummy;
 } GLibJsonRpcClient; 
 
 GLibJsonRpcClient *glib_jsonrpc_client_new(const char *host, int port);

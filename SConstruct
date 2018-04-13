@@ -9,13 +9,17 @@ else:
 
 commit_id = os.popen('git rev-parse HEAD').read().replace('\n','')
 
+# Replaced '-Wno-unused-but-set-variable' with
+# '-Wno-unused-variable' as clang did not recognise it.
+
 env = Environment(LIBPATH=[],
                   CPPFLAGS = cppflags + ['-Wno-deprecated-declarations',
                                          '-Wno-reorder',
-                                         '-Wno-unused-but-set-variable',
+					 '-Wno-unused-variable',
                                          '-Wno-unused-function'],
                   CXXFLAGS=['-std=c++1y']
                   )
+
 
 env['SBOX'] = False
 env['COMMITIDSHORT'] = commit_id[0:6]
