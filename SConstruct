@@ -158,7 +158,8 @@ env.Alias("install",
            env.Install('/usr/local/lib',
                        [
 #                           '#/src/libgiv-widget.so',
-                           '#/src/libgiv-image.so',
+#                           '#/src/libgiv-image.so',
+                           '#/src/libgiv-image.dylib',
                            ]
                        ),
            env.Install('${PACKAGE_PLUGIN_DIR}',

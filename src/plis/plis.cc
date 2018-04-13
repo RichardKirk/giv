@@ -4,7 +4,7 @@
 #include <stdarg.h>
 #include <iostream>
 #include <cstring>
-#include <malloc.h>
+// #include <malloc.h>
 #include <fstream>
 #include "plis.h"
 
